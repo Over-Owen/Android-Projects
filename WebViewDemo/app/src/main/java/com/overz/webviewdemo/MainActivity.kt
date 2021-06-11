@@ -2,6 +2,7 @@ package com.overz.webviewdemo
 
 
 import android.os.Bundle
+import android.view.KeyEvent
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +24,20 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
         }
-        webView.loadUrl("file:android_asset/Typora.html")
+        webView.loadUrl("file:android_asset/index/index.html")
     }
 
+    //设置返回键的监听
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+            if (webView!!.canGoBack()){
+                webView!!.goBack()  //返回上一个页面
+                return true
+            }else{
+                finish()
+                return true
+            }
+        }
+        return false
+    }
 }
