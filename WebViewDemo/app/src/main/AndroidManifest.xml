@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WebViewDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".webview.WebviewActivity"></activity>
+        <activity android:name=".login.LoginActivity"></activity>
+        <activity android:name=".webview.WebviewActivity" />
+        <activity android:name=".charts.ChartsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
