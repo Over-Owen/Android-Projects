@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>测试Android Json传值</title>
-    <script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
-    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
-
-    <script type="text/javascript">
-$(function(){
-    //通过暴露的my对象来获取数据
-    var data = my.getData();
-    //将json字符串转换为数组
-     var f = eval(data);
-    //向表格填充数据
-    for(var i = 0;i<f.length;i++){
-     var en = f[i];
-     $("table").append("<tr><td>"+en.age+"</td><td>"+en.name+"</td><td>"+en.uint+"</td></tr>");
-     }
-   });
-    </script>
-</head>
-<body>
-人员表
-<div>
-    <table id="table" border="1" bgcolor="#ffddff"></table>
-</div>
-</body>
-</html>
+<div id="div" style="width:100px; height:100px; background-color:#099;"></div>
+<script type="text/javascript">
+function jsMethod(jsonParams){
+   document.getElementById("div").style.backgroundColor='red';
+   document.getElementById("div").innerHTML=jsonParams;
+   //return '987654321';//如果返回数据，会重定向
+}
+</script>

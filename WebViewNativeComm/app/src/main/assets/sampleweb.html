@@ -13,6 +13,8 @@
         JSBridge.showMessageInNative(valueReceived);
     }
     function updateFromNative(message){
+        let receiveData = message
+        console.log(receiveData)
 		document.getElementById("inputField").value = message;
     }
 </script>

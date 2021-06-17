@@ -24,20 +24,18 @@
     cursor:pointer;
   }
 
-
   .inputStyle {font-size:16px;padding:6px}
   </style>
 </head>
 
 <body>
 <p>测试Android WebView 与 Javascript 交互</p>
-<input id = "name_input" class = "inputStyle" type="text"/>
-<a class = "rect" Onclick="sendInfoToKotlin()">JS调用Kotlin</a>
-<a class = "rect" Onclick="sendInfoEXIT()"><h1>退出</h1></a>
-
+<input type="text" id = "name_input" class = "inputStyle"/>
+<input type = button value = "JS调用Activity" style="width:100px;height:60px" Onclick="sendInfoToActivity()"></a>
+<input type = button value = "退出WebView" style="width:100px;height:60px" Onclick="sendInfoEXIT()"/>
 
 <script>
-  function sendInfoToKotlin(){
+  function sendInfoToActivity(){
     //调用android程序中的方法，并传递参数
     var name = document.getElementById("name_input").value;
     window.AndroidWebView.showInfoFromJs(name);
@@ -48,7 +46,7 @@
   }
 
   //在android代码中调用此方法
-  function showInfoFromKotlin(msg){
+  function showInfoFromActivity(msg){
     alert("来自客户端的信息："+msg);
   }
   </script>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.overz.webviewdemo">
     <!-- 添加网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,10 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WebViewDemo"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".login.LoginActivity"></activity>
-        <activity android:name=".webview.WebviewActivity" />
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".transport.TransActivity" />
+        <activity android:name=".natweb.NawebActivity" />
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".charts.ChartsActivity" />
+        <activity android:name=".webview.WebviewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

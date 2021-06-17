@@ -6,10 +6,10 @@ import android.view.View
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.overz.webviewdemo.R
+import com.overz.webviewdemo.webview.WebviewActivity
 import kotlin.system.exitProcess
 
 
@@ -36,6 +36,7 @@ class ChartsActivity : AppCompatActivity() {
         webSettings.domStorageEnabled = true // 启用或禁用DOM缓存
         webSettings.allowFileAccess = true // 设置可以访问文件
         webSettings.setGeolocationEnabled(true) // 是否使用地理位置
+        webView!!.addJavascriptInterface(ChartsActivity.JsInterface(this), "AndroidWebView")
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 //使用WebView加载显示url
@@ -44,7 +45,7 @@ class ChartsActivity : AppCompatActivity() {
                 return true
             }
         }
-
+        sendInfoToJs()
     }
     //获取JS中的传来数据
     private class JsInterface(private val mContext: Context) {
@@ -64,11 +65,11 @@ class ChartsActivity : AppCompatActivity() {
         }
     }
 
-    //在Kotlin中调用js代码
-    fun sendInfoToJs(view: View?) {
+    //在Activity中调用js代码
+    fun sendInfoToJs() {
         val msg = "123456"
 //        val msg = (findViewById<View>(R.id.input_et) as EditText).text.toString()
-        //调用js中的函数：showInfoFromKotlin(msg),传入参数
-        webView!!.loadUrl("javascript:showInfoFromKotlin('$msg')")
+        //调用js中的函数：showInfoFromActivity(msg),传入参数
+        webView!!.loadUrl("javascript:showInfoFromActivity('$msg')")
     }
 }

@@ -4,37 +4,71 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
-    <!--密码功能-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp">
+        android:layout_margin="30dp">
+
 
         <Button
-            android:id="@+id/myButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/chartsActButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="20dp"
             android:background="@null"
-            android:textColor="#2999ce"
-            android:gravity="start"
-            android:layout_marginTop="16dp"
-            android:textSize="16dp"
-            android:text="跳转WebView"/>
+            android:text="charts页面"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
 
         <Button
-            android:id="@+id/edText"
-            android:layout_width="wrap_content"
+            android:id="@+id/webviewActButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
             android:background="@null"
-            android:textColor="#2999ce"
-            android:gravity="end"
-            android:text="跳转登录"
-            android:layout_marginTop="16dp"
-            android:textSize="16dp"
-            android:layout_alignParentRight="true"/>
+            android:text="webview页面"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+        <Button
+            android:id="@+id/loginActButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@null"
+            android:text="Login页面"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+        <Button
+            android:id="@+id/nawebActButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:background="@null"
+            android:text="Native页面"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+        <Button
+            android:id="@+id/myWebviewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="200dp"
+            android:background="@null"
+            android:text="Trans页面"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
 
     </RelativeLayout>
+
 
 </LinearLayout>

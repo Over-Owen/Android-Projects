@@ -6,7 +6,6 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.fastjson.JSON
-import com.alibaba.fastjson.JSONPObject
 import com.overz.webviewdemo.R
 import com.overz.webviewdemo.webview.WebviewActivity
 import java.util.*

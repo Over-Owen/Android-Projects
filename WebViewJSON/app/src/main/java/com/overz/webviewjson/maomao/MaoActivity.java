@@ -12,12 +12,12 @@ import com.overz.webviewjson.R;
 
 public class MaoActivity extends AppCompatActivity {
 
-    @SuppressLint("JavascriptInterface")
+    @SuppressLint({"JavascriptInterface", "SetJavaScriptEnabled"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mao);
-        WebView mWebView = (WebView) this.findViewById(R.id.webView);
+        WebView mWebView = this.findViewById(R.id.webView);
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setAllowFileAccess(true);
