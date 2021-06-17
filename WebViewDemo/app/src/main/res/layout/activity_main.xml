@@ -1,74 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
 
-    <RelativeLayout
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="60dp">
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp">
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18dp"
+        android:text="Android向JS传递对象数据" />
+
+    <Button
+        android:id="@+id/nativeChartButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@null"
+        android:text="本地加载图表"
+        android:textColor="#000000"
+        android:textSize="16dp" />
 
 
-        <Button
-            android:id="@+id/chartsActButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="18dp"
-            android:layout_marginTop="20dp"
-            android:background="@null"
-            android:text="charts页面"
-            android:textColor="#ffffff"
-            android:textSize="16dp" />
-
-
-        <Button
-            android:id="@+id/webviewActButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="60dp"
-            android:background="@null"
-            android:text="webview页面"
-            android:textColor="#ffffff"
-            android:textSize="16dp" />
-        <Button
-            android:id="@+id/loginActButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="100dp"
-            android:background="@null"
-            android:text="Login页面"
-            android:textColor="#ffffff"
-            android:textSize="16dp" />
-        <Button
-            android:id="@+id/nawebActButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="150dp"
-            android:background="@null"
-            android:text="Native页面"
-            android:textColor="#ffffff"
-            android:textSize="16dp" />
-        <Button
-            android:id="@+id/myWebviewButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="200dp"
-            android:background="@null"
-            android:text="Trans页面"
-            android:textColor="#ffffff"
-            android:textSize="16dp" />
-
-    </RelativeLayout>
-
+</RelativeLayout>
 
 </LinearLayout>

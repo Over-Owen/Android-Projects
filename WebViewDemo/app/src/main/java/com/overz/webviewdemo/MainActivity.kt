@@ -1,78 +1,45 @@
 package com.overz.webviewdemo
 
-
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
-import com.overz.webviewdemo.charts.ChartsActivity
-import com.overz.webviewdemo.login.LoginActivity
-import com.overz.webviewdemo.natweb.NawebActivity
-import com.overz.webviewdemo.transport.TransActivity
-import com.overz.webviewdemo.webview.WebviewActivity
+import com.overz.webviewdemo.webview.NativeActivity
 
-
+/**
+ * MainActivity 主界面 - 类.
+ * <p>
+ * 本类(Activity)作为主界面跳转到其他Activity，提供按钮点击事件跳转
+ * </p>
+ * @author zhuyongchao
+ * @version 1.0.0
+ * @since 2021-6-16 Version 1.0.0
+ */
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var chartsAct: Button
-    private lateinit var webviewAct: Button
-    private lateinit var loginAct: Button
-    private lateinit var nawebAct: Button
-    private lateinit var myWebview: Button
-
-
-
+    //Button 延迟初始化nativeChart按钮控件
+    private lateinit var nativeChart: Button
+    /**
+     * Activity创建时进行的操作 - 方法.
+     * <p>
+     * 用于初始化一些变量的值，如页面布局文件的位置
+     * </p>
+     *
+     * @param savedInstanceState  Bundle，保存Activity的状态
+     *
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //为chartsActButton按钮创建监听
-        chartsAct = findViewById(R.id.chartsActButton)
-        chartsAct.setOnClickListener {
-            //从当前Activity跳转到SecondActivity
-            val intent = Intent(this, ChartsActivity::class.java)
-            //startActivity()方法专门用于启动Activity
-            //他接受一个Intent参数
+        //为myButton按钮赋值
+        nativeChart = findViewById(R.id.nativeChartButton)
+        //设置按钮点击的监听事件
+        nativeChart.setOnClickListener {
+            //从当前Activity跳转到NativeActivity
+            val intent = Intent(this, NativeActivity::class.java)
+            //startActivity()方法用于启动Activity
+            //接受一个Intent参数
             startActivity(intent)
         }
-        //为webviewActButton按钮创建监听
-        webviewAct = findViewById(R.id.webviewActButton)
-        webviewAct.setOnClickListener {
-            //从当前Activity跳转到SecondActivity
-            val intent = Intent(this, WebviewActivity::class.java)
-            //startActivity()方法专门用于启动Activity
-            //他接受一个Intent参数
-            startActivity(intent)
-        }
-        //为loginActButton按钮创建监听
-        loginAct = findViewById(R.id.loginActButton)
-        loginAct.setOnClickListener {
-            //从当前Activity跳转到SecondActivity
-            val intent = Intent(this, LoginActivity::class.java)
-            //startActivity()方法专门用于启动Activity
-            //他接受一个Intent参数
-            startActivity(intent)
-        }
-        //为loginActButton按钮创建监听
-        nawebAct = findViewById(R.id.nawebActButton)
-        nawebAct.setOnClickListener {
-            //从当前Activity跳转到SecondActivity
-            val intent = Intent(this, NawebActivity::class.java)
-            //startActivity()方法专门用于启动Activity
-            //他接受一个Intent参数
-            startActivity(intent)
-        }
-        //为myWebviewButton按钮创建监听
-        myWebview = findViewById(R.id.myWebviewButton)
-        myWebview.setOnClickListener {
-            //从当前Activity跳转到SecondActivity
-            val intent = Intent(this, TransActivity::class.java)
-            //startActivity()方法专门用于启动Activity
-            //他接受一个Intent参数
-            startActivity(intent)
-        }
-
-
-
     }
 }

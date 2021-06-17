@@ -13,12 +13,9 @@ import java.util.List;
 
 public class MyObject {
     public static final String TAG = MyObject.class.getSimpleName() ;
-    private Context mContext;
-    private String data;
+
     public MyObject(Context c,String data){
-        this.data = data;
         Log.e(TAG, "MyObject: "+data );
-        mContext = c;
     }
 
     /**
